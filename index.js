@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: 'https://your-frontend-domain.com', // Replace with your actual frontend URL
+  origin: 'https://todofe2.vercel.app', // Replace with your actual frontend URL
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   credentials: true
 }));
