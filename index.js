@@ -4,9 +4,14 @@ const cors = require("cors");
 const itemRoutes = require('./itemRoutes');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-frontend-domain.com', // Replace with your actual frontend URL
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  credentials: true
+}));
+
 app.use(express.json()); 
 
 // Connect to MongoDB
